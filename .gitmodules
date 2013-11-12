@@ -1,0 +1,69 @@
+[submodule "bundle/auto-pairs"]
+        path = bundle/auto-pairs
+        url = git@github.com:jiangmiao/auto-pairs.git
+[submodule "bundle/auto-pairs"]
+        path = bundle/auto-pairs 
+        url = git@github.com:jiangmiao/auto-pairs.git
+[submodule "bundle/Command-T"]
+        path = bundle/Command-T 
+        url = git@github.com:wincent/Command-T.git
+[submodule "bundle/matchit"]
+        path = bundle/matchit 
+        url = git@github.com:tmhedberg/matchit.git
+[submodule "bundle/textile.vim"]
+        path = bundle/textile.vim 
+        url = git@github.com:timcharper/textile.vim.git
+[submodule "bundle/vim-airline"]
+        path = bundle/vim-airline 
+        url = https://github.com/bling/vim-airline
+[submodule "bundle/vim-bundler"]
+        path = bundle/vim-bundler 
+        url = git@github.com:tpope/vim-bundler.git
+[submodule "bundle/vim-coffee-script"]
+        path = bundle/vim-coffee-script 
+        url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/vim-commentary"]
+        path = bundle/vim-commentary 
+        url = git@github.com:tpope/vim-commentary.git
+[submodule "bundle/vim-flavored-markdown"]
+        path = bundle/vim-flavored-markdown 
+        url = git@github.com:jtratner/vim-flavored-markdown.git
+[submodule "bundle/vim-fugitive"]
+        path = bundle/vim-fugitive 
+        url = git@github.com:tpope/vim-fugitive.git
+[submodule "bundle/vim-gnupg"]
+        path = bundle/vim-gnupg 
+        url = git@github.com:jamessan/vim-gnupg.git
+[submodule "bundle/vim-golang"]
+        path = bundle/vim-golang 
+        url = git@github.com:jnwhiteh/vim-golang.git
+[submodule "bundle/vim-javascript"]
+        path = bundle/vim-javascript 
+        url = git@github.com:pangloss/vim-javascript.git
+[submodule "bundle/vim-markdown"]
+        path = bundle/vim-markdown 
+        url = git@github.com:tpope/vim-markdown.git
+[submodule "bundle/vim-puppet"]
+        path = bundle/vim-puppet 
+        url = git@github.com:rodjek/vim-puppet.git
+[submodule "bundle/vim-ragtag"]
+        path = bundle/vim-ragtag 
+        url = git@github.com:tpope/vim-ragtag.git
+[submodule "bundle/vim-rails"]
+        path = bundle/vim-rails 
+        url = git@github.com:tpope/vim-rails.git
+[submodule "bundle/vim-rake"]
+        path = bundle/vim-rake 
+        url = git@github.com:tpope/vim-rake.git
+[submodule "bundle/vim-rbenv"]
+        path = bundle/vim-rbenv 
+        url = git://github.com/tpope/vim-rbenv.git
+[submodule "bundle/vim-repeat"]
+        path = bundle/vim-repeat 
+        url = git@github.com:tpope/vim-repeat.git
+[submodule "bundle/vim-ruby"]
+        path = bundle/vim-ruby 
+        url = git@github.com:vim-ruby/vim-ruby.git
+[submodule "bundle/vim-surround"]
+        path = bundle/vim-surround 
+        url = git@github.com:tpope/vim-surround.git
