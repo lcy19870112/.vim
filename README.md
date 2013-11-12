@@ -1,6 +1,6 @@
 # My .vim stuff
 
-Inspired by @rey
+Inspired by [@rey](https://github.com/rey)
 
 ## Get the config
 
