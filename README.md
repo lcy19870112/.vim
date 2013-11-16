@@ -21,3 +21,8 @@ ruby extconf.rb
 make
 ```
 
+## Stay up-to-date
+
+```bash
+git submodule update --remote
+```
