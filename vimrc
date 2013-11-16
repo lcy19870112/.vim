@@ -125,7 +125,6 @@ cnoremap <C-n> <Down>
 " when searching for files, we ignore all the
 " following (taken from bash completion)
 set wildignore=*.o,*.class,*.so,*.so.*,*.a,*.tar,*.tgz,*.gz,*.tbz2,*.rpm,*.zip,*.ZIP,*.gif,*.GIF,*.jpeg,*.jpg,*.JPEG,*.JPG,*.mp3,*.MP3,*.mpg,*.MPG,*.avi,*.AVI,*.asf,*.ASF,*.ogg,*.OGG,*.aux,*.log,*.bbl,*.blg,*.brf,*.cb,*.ind,*.idx,*.ilg,*.inx,*.ps,*.dvi,*.pdf,*.toc,*.bak,*.png
-let g:CommandTWildIgnore=&wildignore.",**/bower_components/*,**/node_modules/*,**/tmp/cache/assets/*,**/vendor/bundle/*"
 
 " not sure I need this anymore
 set ruler
@@ -150,6 +149,8 @@ set nowrap
 nmap ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 nmap ,sp :sp <C-R>=expand("%:p:h") . "/" <CR>
 nmap ,r :r <C-R>=expand("%:p:h") . "/" <CR>
+"nmap <Leader>t :CtrlP<CR>
+
 
 " apparently there is still a bug that allows an unsuspecting
 " user to open a worm file....
@@ -218,3 +219,8 @@ hi IndentGuidesEven  ctermbg=241
 
 autocmd InsertEnter * let w:last_fdm=&foldmethod | setlocal foldmethod=manual
 autocmd InsertLeave * let &l:foldmethod=w:last_fdm
+
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](([^\/]+\/)*node_modules|([^\/]+\/)*bower_components|([^\/]+\/)*vendor/bundle|([^\/]+\/)*tmp/cache/assets)$'
+  \ }

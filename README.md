@@ -12,15 +12,6 @@ git submodule init
 git submodule update
 ```
 
-## Some post install work
-
-```bash
-cd ~/.vim/bundle/Command-T/ruby/command-t/
-make clean
-ruby extconf.rb
-make
-```
-
 ## Stay up-to-date
 
 ```bash
