@@ -178,7 +178,6 @@ command -nargs=0 GotoDir execute "cd " . expand("%:p:h")
 augroup ruby
   set omnifunc=rubycomplete#Complete
   let g:rubycomplete_buffer_loading = 1
-  let g:rubycomplete_rails = 1
   let g:rubycomplete_classes_in_global = 1
   let g:rubycomplete_include_object = 1
   let g:rubycomplete_include_objectspace = 1
@@ -186,10 +185,6 @@ augroup ruby
   set foldmethod=syntax
   set foldlevelstart=99
 augroup END
-
-" let g:rubycomplete_buffer_loading = 1
-" let g:rubycomplete_classes_in_global = 1
-" let g:rubycomplete_rails = 1
 
 " paste toggle
 set pastetoggle=<F10>
