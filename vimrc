@@ -225,3 +225,4 @@ let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](([^\/]+\/)*node_modules|([^\/]+\/)*bower_components|([^\/]+\/)*vendor/bundle|([^\/]+\/)*tmp/cache/assets)$'
   \ }
+let g:ctrlp_working_path_mode=''
