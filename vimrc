@@ -45,7 +45,7 @@ set nobackup
 " highligh our search
 set hlsearch
 
-" While typing a search pattern, show 
+" While typing a search pattern, show
 " immediately where the so far
 " typed pattern matches
 set incsearch
@@ -53,20 +53,20 @@ set incsearch
 " at beginning of line, Tab inserts spaces
 " according to shiftwidth. See :help sta
 " This needs to be off for makefiles
-set smarttab 
+set smarttab
 set expandtab
 
 " on what characters vi should break (with
 " set wrap in particular)
 "set brk=" I!*-+;:,./?"
 
-" basically get the file / option / etc 
+" basically get the file / option / etc
 " completion to act like the shell
 set wildmode=longest:list
 
 " effectively a shell window for file /
 " option / etc completion
-set wmnu 
+set wmnu
 
 " turn on line numbers
 set nu
@@ -121,7 +121,7 @@ inoremap ^L ^X^L
 
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
-    
+
 " when searching for files, we ignore all the
 " following (taken from bash completion)
 set wildignore=*.o,*.class,*.so,*.so.*,*.a,*.tar,*.tgz,*.gz,*.tbz2,*.rpm,*.zip,*.ZIP,*.gif,*.GIF,*.jpeg,*.jpg,*.JPEG,*.JPG,*.mp3,*.MP3,*.mpg,*.MPG,*.avi,*.AVI,*.asf,*.ASF,*.ogg,*.OGG,*.aux,*.log,*.bbl,*.blg,*.brf,*.cb,*.ind,*.idx,*.ilg,*.inx,*.ps,*.dvi,*.pdf,*.toc,*.bak,*.png
@@ -132,7 +132,7 @@ set ruler
 " every window always has a statusline
 set laststatus=2
 
-" jump to matching bracket on insertion 
+" jump to matching bracket on insertion
 " (handy when working on code)
 " set showmatch
 
@@ -165,13 +165,13 @@ set viminfo='1000,f1,\"500,:1000,%,n~/.viminfo
 
 func Nr2Hex(nr)
   let n = a:nr
-  let r = ""                 
+  let r = ""
   while n
     let r = '0123456789abcdef'[n % 16] . r
     let n = n / 16
   endwhile
   return r
-endfunc       
+endfunc
 
 command -nargs=0 GotoDir execute "cd " . expand("%:p:h")
 "au BufEnter * silent GotoDir
@@ -226,3 +226,15 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](([^\/]+\/)*node_modules|([^\/]+\/)*bower_components|([^\/]+\/)*vendor/bundle|([^\/]+\/)*tmp/cache/assets)$'
   \ }
 let g:ctrlp_working_path_mode=''
+
+let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=node_modules --ignore-dir=bower_components"
+
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+autocmd BufWritePre * :silent %s/\s\+$//e
+
+let g:syntastic_enable_signs=0

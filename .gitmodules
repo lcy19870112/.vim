@@ -136,3 +136,9 @@
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = git@github.com:mileszs/ack.vim.git
+[submodule "plugins/vim-unimpaired"]
+	path = plugins/vim-unimpaired
+	url = git@github.com:tpope/vim-unimpaired.git
+[submodule "plugins/syntastic"]
+	path = plugins/syntastic
+	url = git@github.com:scrooloose/syntastic.git
