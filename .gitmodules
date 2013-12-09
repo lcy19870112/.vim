@@ -142,3 +142,9 @@
 [submodule "plugins/syntastic"]
 	path = plugins/syntastic
 	url = git@github.com:scrooloose/syntastic.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = git@github.com:tpope/vim-unimpaired.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git@github.com:scrooloose/syntastic.git
