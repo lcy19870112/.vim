@@ -15,5 +15,5 @@ git submodule update
 ## Stay up-to-date
 
 ```bash
-git submodule update --remote
+git submodule update --remote --checkout
 ```

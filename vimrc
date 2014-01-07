@@ -185,6 +185,7 @@ augroup ruby
 
   set foldmethod=syntax
   set foldlevelstart=99
+  map <F6> :SyntasticCheck rubocop<CR>
 augroup END
 
 " paste toggle
@@ -238,3 +239,5 @@ autocmd BufWinLeave * call clearmatches()
 autocmd BufWritePre * :silent %s/\s\+$//e
 
 let g:syntastic_enable_signs=0
+let g:airline#extensions#syntastic#enabled=0
+let g:syntastic_check_on_wq=0
