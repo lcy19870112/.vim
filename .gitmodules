@@ -1,0 +1,100 @@
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
+	url = git@github.com:mileszs/ack.vim.git
+	branch = master
+[submodule "bundle/auto-pairs"]
+	path = bundle/auto-pairs
+	url = git@github.com:jiangmiao/auto-pairs.git
+	branch = master
+[submodule "bundle/ctrlp.vim"]
+	path = bundle/ctrlp.vim
+	url = git@github.com:kien/ctrlp.vim.git
+	branch = master
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = git@github.com:tmhedberg/matchit.git
+	branch = master
+[submodule "bundle/textile.vim"]
+	path = bundle/textile.vim
+	url = git@github.com:timcharper/textile.vim.git
+	branch = master
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = git@github.com:bling/vim-airline
+	branch = master
+[submodule "bundle/vim-bundler"]
+	path = bundle/vim-bundler
+	url = git@github.com:tpope/vim-bundler.git
+	branch = master
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = git@github.com:kchmck/vim-coffee-script.git
+	branch = master
+[submodule "bundle/vim-commentary"]
+	path = bundle/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
+	branch = master
+[submodule "bundle/vim-flavored-markdown"]
+	path = bundle/vim-flavored-markdown
+	url = git@github.com:jtratner/vim-flavored-markdown.git
+	branch = master
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+	branch = master
+[submodule "bundle/vim-gnupg"]
+	path = bundle/vim-gnupg
+	url = git@github.com:jamessan/vim-gnupg.git
+	branch = master
+[submodule "bundle/vim-golang"]
+	path = bundle/vim-golang
+	url = git@github.com:jnwhiteh/vim-golang.git
+	branch = master
+[submodule "bundle/vim-indent-guides"]
+	path = bundle/vim-indent-guides
+	url = git@github.com:nathanaelkane/vim-indent-guides.git
+	branch = master
+[submodule "bundle/vim-javascript"]
+	path = bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
+	branch = master
+[submodule "bundle/vim-json"]
+	path = bundle/vim-json
+	url = git@github.com:leshill/vim-json.git
+	branch = master
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = git@github.com:tpope/vim-markdown.git
+	branch = master
+[submodule "bundle/vim-puppet"]
+	path = bundle/vim-puppet
+	url = git@github.com:rodjek/vim-puppet.git
+	branch = master
+[submodule "bundle/vim-ragtag"]
+	path = bundle/vim-ragtag
+	url = git@github.com:tpope/vim-ragtag.git
+	branch = master
+[submodule "bundle/vim-rake"]
+	path = bundle/vim-rake
+	url = git@github.com:tpope/vim-rake.git
+	branch = master
+[submodule "bundle/vim-rbenv"]
+	path = bundle/vim-rbenv
+	url = git@github.com:tpope/vim-rbenv.git
+	branch = master
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
+	branch = master
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = git@github.com:vim-ruby/vim-ruby.git
+	branch = master
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = git@github.com:tpope/vim-surround.git
+	branch = master
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = git@github.com:tpope/vim-unimpaired.git
+	branch = master

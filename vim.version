@@ -1,6 +1,8 @@
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Nov  5 2013 23:00:41)
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jan 23 2014 09:25:58)
+Included patches: 1-155
 Compiled by myitcv@myitcv-virtual-machine
 Normal version without GUI.  Features included (+) or not (-):
++acl             -farsi           -mouse_netterm   +syntax
 -arabic          +file_in_path    -mouse_sgr       +tag_binary
 +autocmd         +find_in_path    -mouse_sysmouse  +tag_old_static
 -balloon_eval    +float           -mouse_urxvt     -tag_any_white
@@ -8,8 +10,8 @@ Normal version without GUI.  Features included (+) or not (-):
 +builtin_terms   -footer          +multi_byte      +terminfo
 +byte_offset     +fork()          +multi_lang      +termresponse
 +cindent         +gettext         -mzscheme        +textobjects
--clientserver    -hangul_input    -netbeans_intg   +title
--clipboard       +iconv           +path_extra      -toolbar
++clientserver    -hangul_input    -netbeans_intg   +title
++clipboard       +iconv           +path_extra      -toolbar
 +cmdline_compl   +insert_expand   -perl            +user_commands
 +cmdline_hist    +jumplist        +persistent_undo +vertsplit
 +cmdline_info    -keymap          +postscript      +virtualedit
@@ -21,18 +23,17 @@ Normal version without GUI.  Features included (+) or not (-):
 +cursorshape     +localmap        +reltime         +wildmenu
 +dialog_con      +lua             -rightleft       +windows
 +diff            +menu            +ruby            +writebackup
-+digraphs        +mksession       +scrollbind      -X11
--dnd             +modify_fname    -signs           -xfontset
++digraphs        +mksession       +scrollbind      +X11
+-dnd             +modify_fname    -signs           +xfontset
 -ebcdic          +mouse           +smartindent     -xim
--emacs_tags      -mouseshape      -sniff           -xsmp
-+eval            -mouse_dec       +startuptime     -xterm_clipboard
+-emacs_tags      -mouseshape      -sniff           +xsmp_interact
++eval            -mouse_dec       +startuptime     +xterm_clipboard
 +ex_extra        -mouse_gpm       +statusline      -xterm_save
-+extra_search    -mouse_jsbterm   -sun_workshop    
--farsi           -mouse_netterm   +syntax          
++extra_search    -mouse_jsbterm   -sun_workshop    -xpm
    system vimrc file: "$VIM/vimrc"
      user vimrc file: "$HOME/.vimrc"
  2nd user vimrc file: "~/.vim/vimrc"
       user exrc file: "$HOME/.exrc"
   fall-back for $VIM: "/home/myitcv/usr/vim/share/vim"
-Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H   -I/usr/local/include  -g -O2 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1      
-Linking: gcc   -L. -L/home/myitcv/.rbenv/versions/2.0.0-p247/lib  -fstack-protector -rdynamic -Wl,-export-dynamic  -L/usr/local/lib -Wl,--as-needed -o vim        -lm -ltinfo    -ldl  -L/usr/lib/x86_64-linux-gnu -lluajit-5.1     -Wl,-R -Wl,/home/myitcv/.rbenv/versions/2.0.0-p247/lib -L/home/myitcv/.rbenv/versions/2.0.0-p247/lib -lruby-static -lpthread -lrt -ldl -lcrypt -lm  -L/home/myitcv/.rbenv/versions/2.0.0-p247/lib   
+Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1      
+Linking: gcc   -L. -L/home/myitcv/.rbenv/versions/2.0.0-p353/lib  -fstack-protector -rdynamic -Wl,-export-dynamic  -L/usr/local/lib -Wl,--as-needed -o vim    -lSM -lICE -lXt -lX11 -lXdmcp -lSM -lICE  -lm -ltinfo    -ldl  -L/usr/lib/x86_64-linux-gnu -lluajit-5.1     -Wl,-R -Wl,/home/myitcv/.rbenv/versions/2.0.0-p353/lib -L/home/myitcv/.rbenv/versions/2.0.0-p353/lib -lruby-static -lpthread -lrt -ldl -lcrypt -lm  -L/home/myitcv/.rbenv/versions/2.0.0-p353/lib   
