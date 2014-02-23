@@ -224,7 +224,7 @@ autocmd InsertLeave * let &l:foldmethod=w:last_fdm
 
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](([^\/]+\/)*node_modules|([^\/]+\/)*bower_components|([^\/]+\/)*vendor/bundle|([^\/]+\/)*tmp/cache/assets)$'
+  \ 'dir':  '\v[\/](([^\/]+\/)*node_modules|([^\/]+\/)*bower_components|([^\/]+\/)*vendor/bundle|([^\/]+\/)*tmp/cache/assets)$|_site'
   \ }
 let g:ctrlp_working_path_mode=''
 
