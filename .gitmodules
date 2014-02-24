@@ -34,10 +34,6 @@
 	path = bundle/vim-commentary
 	url = git@github.com:tpope/vim-commentary.git
 	branch = master
-[submodule "bundle/vim-flavored-markdown"]
-	path = bundle/vim-flavored-markdown
-	url = git@github.com:jtratner/vim-flavored-markdown.git
-	branch = master
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
@@ -61,10 +57,6 @@
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
 	url = git@github.com:leshill/vim-json.git
-	branch = master
-[submodule "bundle/vim-markdown"]
-	path = bundle/vim-markdown
-	url = git@github.com:tpope/vim-markdown.git
 	branch = master
 [submodule "bundle/vim-puppet"]
 	path = bundle/vim-puppet
