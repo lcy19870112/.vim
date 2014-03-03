@@ -280,3 +280,4 @@ let g:tagbar_type_go = {
 \ }
 
 let g:airline#extensions#tagbar#enabled = 1
+let g:godef_same_file_in_same_window = 1
