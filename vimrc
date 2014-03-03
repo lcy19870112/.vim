@@ -238,11 +238,12 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 autocmd BufWritePre * :silent %s/\s\+$//e
 
-let g:syntastic_enable_signs=0
-let g:airline#extensions#syntastic#enabled=0
-let g:syntastic_check_on_wq=0
+let g:syntastic_enable_signs=1
+let g:syntastic_check_on_open=1
+map <F5> :Errors<CR>
 
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+" tell me which syntax highlighting rule applies to symbol under cursor
+" map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 aug QFClose
   au!
