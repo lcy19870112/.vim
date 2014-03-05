@@ -239,7 +239,6 @@ autocmd BufWinLeave * call clearmatches()
 autocmd BufWritePre * :silent %s/\s\+$//e
 
 let g:syntastic_enable_signs=1
-let g:syntastic_check_on_open=1
 map <F5> :Errors<CR>
 
 " tell me which syntax highlighting rule applies to symbol under cursor
@@ -282,3 +281,4 @@ let g:tagbar_type_go = {
 
 let g:airline#extensions#tagbar#enabled = 1
 let g:godef_same_file_in_same_window = 1
+set updatetime=1000
