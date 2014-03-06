@@ -92,9 +92,6 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = git@github.com:tpope/vim-markdown.git
-[submodule "bundle/vim-gocode"]
-	path = bundle/vim-gocode
-	url = git@github.com:Blackrush/vim-gocode.git
 [submodule "bundle/vim-dispatch"]
 	path = bundle/vim-dispatch
 	url = git@github.com:tpope/vim-dispatch.git
@@ -103,7 +100,10 @@
 	url = git@github.com:majutsushi/tagbar.git
 [submodule "bundle/vim-godef"]
 	path = bundle/vim-godef
-	url = git@github.com:dgryski/vim-godef.git
+	url = git@github.com:myitcv/vim-godef.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git@github.com:scrooloose/syntastic.git
+[submodule "bundle/vim-gocode"]
+	path = bundle/vim-gocode
+	url = git@github.com:Blackrush/vim-gocode.git

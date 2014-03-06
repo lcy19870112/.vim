@@ -203,9 +203,9 @@ hi SpellLocal term=reverse ctermfg=black ctermbg=darkgreen guifg=#ffffff guibg=#
 " Map the special currency symbol (see ~/.bashrc) to <S-CR>
 imap ¤ <S-CR>
 
-" hi MatchParen ctermbg=lightblue guibg=lightblue
-
 colorscheme sahara
+
+hi MatchParen ctermbg=241
 
 nnoremap ,gD :diffoff!<cr>:execute "bdelete fugitive://*".expand("%:p:t")<cr>
 
@@ -236,10 +236,18 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-autocmd BufWritePre * :silent %s/\s\+$//e
+
+autocmd BufWritePre * call StripTrailingWhite()
+
+function! StripTrailingWhite()
+    let l:winview = winsaveview()
+    silent! %s/\s\+$//
+    call winrestview(l:winview)
+endfunction
 
 let g:syntastic_enable_signs=1
-map <F5> :Errors<CR>
+let g:syntastic_mode_map = { 'mode': 'passive'  }
+map <F5> :SyntasticCheck<CR>:Errors<CR>
 
 " tell me which syntax highlighting rule applies to symbol under cursor
 " map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
