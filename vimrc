@@ -36,6 +36,12 @@ set shortmess=a
 set tabstop=8
 set shiftwidth=2
 
+autocmd FileType go set noexpandtab
+autocmd FileType go set ts=3
+autocmd FileType go let &sw=&ts
+autocmd FileType go let g:indent_guides_enable_on_vim_startup = 0
+autocmd FileType go hi IndentGuidesOdd  ctermbg=NONE
+autocmd FileType go hi IndentGuidesEven  ctermbg=NONE
 " show command in status line
 set noshowcmd
 
@@ -290,6 +296,8 @@ let g:tagbar_type_go = {
 let g:airline#extensions#tagbar#enabled = 1
 let g:godef_same_file_in_same_window = 1
 set updatetime=1000
+
+set completeopt=menu,preview,longest
 
 hi TagbarHighlight term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
 autocmd FileType go nested :TagbarOpen

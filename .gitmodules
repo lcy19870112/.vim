@@ -106,4 +106,4 @@
 	url = git@github.com:scrooloose/syntastic.git
 [submodule "bundle/vim-gocode"]
 	path = bundle/vim-gocode
-	url = git@github.com:Blackrush/vim-gocode.git
+	url = git@github.com:myitcv/vim-gocode.git
