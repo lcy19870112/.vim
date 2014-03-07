@@ -290,3 +290,6 @@ let g:tagbar_type_go = {
 let g:airline#extensions#tagbar#enabled = 1
 let g:godef_same_file_in_same_window = 1
 set updatetime=1000
+
+hi TagbarHighlight term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
+autocmd FileType go nested :TagbarOpen
