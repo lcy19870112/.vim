@@ -94,18 +94,18 @@ set notitle
 " **************    MAPS    *****************
 
 " turn of highlighting (not syntax) post search
-map <C-n>	:noh<CR>
+nnoremap <silent> <C-n>	:noh<CR>
 
 " maps to move between split windows
-map ,1		1<C-w>w
-map ,2		2<C-w>w
-map ,3		3<C-w>w
-map ,4		4<C-w>w
-map ,5		5<C-w>w
-map ,6		6<C-w>w
-map ,7		7<C-w>w
-map ,8		8<C-w>w
-map ,9		9<C-w>w
+nnoremap <silent> ,1		:call common_jumplist#PushLocation()<CR>1<C-w>w
+nnoremap <silent> ,2		:call common_jumplist#PushLocation()<CR>2<C-w>w
+nnoremap <silent> ,3		:call common_jumplist#PushLocation()<CR>3<C-w>w
+nnoremap <silent> ,4		:call common_jumplist#PushLocation()<CR>4<C-w>w
+nnoremap <silent> ,5		:call common_jumplist#PushLocation()<CR>5<C-w>w
+nnoremap <silent> ,6		:call common_jumplist#PushLocation()<CR>6<C-w>w
+nnoremap <silent> ,7		:call common_jumplist#PushLocation()<CR>7<C-w>w
+nnoremap <silent> ,8		:call common_jumplist#PushLocation()<CR>8<C-w>w
+nnoremap <silent> ,9		:call common_jumplist#PushLocation()<CR>9<C-w>w
 
 " it is annoying skipping past many lines when wrap is on
 " nnoremap j gj
@@ -301,3 +301,5 @@ set completeopt=menu,preview,longest
 
 hi TagbarHighlight term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
 autocmd FileType go nested :TagbarOpen
+set switchbuf+=useopen
+

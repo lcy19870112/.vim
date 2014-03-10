@@ -107,3 +107,6 @@
 [submodule "bundle/vim-gocode"]
 	path = bundle/vim-gocode
 	url = git@github.com:myitcv/vim-gocode.git
+[submodule "bundle/vim-common-jumplist"]
+	path = bundle/vim-common-jumplist
+	url = git@github.com:myitcv/vim-common-jumplist.git
