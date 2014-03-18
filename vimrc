@@ -36,9 +36,9 @@ set shortmess=a
 set tabstop=8
 set shiftwidth=2
 
-autocmd FileType go set noexpandtab
-autocmd FileType go set ts=3
-autocmd FileType go let &sw=&ts
+autocmd FileType go setlocal noexpandtab
+autocmd FileType go setlocal ts=3
+autocmd FileType go setlocal sw=3
 autocmd FileType go let g:indent_guides_enable_on_vim_startup = 0
 autocmd FileType go hi IndentGuidesOdd  ctermbg=NONE
 autocmd FileType go hi IndentGuidesEven  ctermbg=NONE
