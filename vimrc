@@ -215,7 +215,7 @@ hi MatchParen ctermbg=241
 
 nnoremap ,gD :diffoff!<cr>:execute "bdelete fugitive://*".expand("%:p:t")<cr>
 
-let g:airline_theme='bubblegum'
+let g:airline_theme='myitcvgum'
 let g:airline#extensions#whitespace#checks=[]
 
 let g:indent_guides_enable_on_vim_startup = 1
