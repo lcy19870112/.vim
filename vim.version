@@ -1,5 +1,5 @@
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Mar 23 2014 21:08:50)
-Included patches: 1-213
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jun  8 2014 20:22:13)
+Included patches: 1-316
 Compiled by myitcv@myitcv-virtual-machine
 Normal version without GUI.  Features included (+) or not (-):
 +acl             -farsi           -mouse_netterm   +syntax
@@ -17,8 +17,8 @@ Normal version without GUI.  Features included (+) or not (-):
 +cmdline_info    -keymap          +postscript      +virtualedit
 +comments        -langmap         +printer         +visual
 -conceal         +libcall         -profile         +visualextra
-+cryptv          +linebreak       +python/dyn      +viminfo
--cscope          +lispindent      +python3/dyn     +vreplace
++cryptv          +linebreak       +python          +viminfo
+-cscope          +lispindent      -python3         +vreplace
 +cursorbind      +listcmds        +quickfix        +wildignore
 +cursorshape     +localmap        +reltime         +wildmenu
 +dialog_con      +lua             -rightleft       +windows
@@ -36,4 +36,4 @@ Normal version without GUI.  Features included (+) or not (-):
       user exrc file: "$HOME/.exrc"
   fall-back for $VIM: "/home/myitcv/usr/vim/share/vim"
 Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1      
-Linking: gcc   -L. -L/home/myitcv/.rbenv/versions/2.0.0-p353/lib  -fstack-protector -rdynamic -Wl,-export-dynamic  -L/usr/local/lib -Wl,--as-needed -o vim    -lSM -lICE -lXt -lX11 -lXdmcp -lSM -lICE  -lm -ltinfo    -ldl  -L/usr/lib/x86_64-linux-gnu -lluajit-5.1     -Wl,-R -Wl,/home/myitcv/.rbenv/versions/2.0.0-p353/lib -L/home/myitcv/.rbenv/versions/2.0.0-p353/lib -lruby-static -lpthread -lrt -ldl -lcrypt -lm  -L/home/myitcv/.rbenv/versions/2.0.0-p353/lib   
+Linking: gcc   -L. -L/home/myitcv/.rbenv/versions/2.0.0-p353/lib  -fstack-protector -rdynamic -Wl,-export-dynamic  -L/usr/local/lib -Wl,--as-needed -o vim    -lSM -lICE -lXt -lX11 -lXdmcp -lSM -lICE  -lm -ltinfo   -ldl  -L/usr/lib/x86_64-linux-gnu -lluajit-5.1  -L/usr/lib/python2.7/config-x86_64-linux-gnu -lpython2.7 -lpthread -ldl -lutil -lm -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions   -Wl,-R -Wl,/home/myitcv/.rbenv/versions/2.0.0-p353/lib -L/home/myitcv/.rbenv/versions/2.0.0-p353/lib -lruby-static -lpthread -lrt -ldl -lcrypt -lm  -L/home/myitcv/.rbenv/versions/2.0.0-p353/lib   
