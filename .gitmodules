@@ -104,3 +104,6 @@
 [submodule "bundle/vim-common-jumplist"]
 	path = bundle/vim-common-jumplist
 	url = git@github.com:myitcv/vim-common-jumplist.git
+[submodule "bundle/vim-go"]
+	path = bundle/vim-go
+	url = git@github.com:myitcv/vim-go.git
