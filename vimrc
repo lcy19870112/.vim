@@ -54,6 +54,11 @@ imap ¤ <S-CR>
 
 nnoremap <silent> <C-n>	:noh<CR>
 
+nmap <C-A-m> :MaximizerToggle<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 nnoremap <silent> ,1		:call common_jumplist#PushLocation()<CR>1<C-w>w
 nnoremap <silent> ,2		:call common_jumplist#PushLocation()<CR>2<C-w>w
 nnoremap <silent> ,3		:call common_jumplist#PushLocation()<CR>3<C-w>w
@@ -146,6 +151,54 @@ hi TagbarHighlight term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
 let g:indent_guides_default_mapping=0
 " ***
 
+" *** AutoPairs
+let g:AutoPairsFlyMode = 1
+" ***
+
+let g:go_disable_autoinstall = 1
+
+source ~/.vim/conf/go.vim
+
+" *** Close unless normal windows remain
+function! s:CountNormalWindows() abort
+
+  let res = 0
+
+  for i in range(1, winnr('$'))
+    let buf = winbufnr(i)
+
+    " skip unlisted buffers
+    if buflisted(buf) == 0
+      continue
+    endif
+
+    " skip un-modifiable buffers
+    if getbufvar(buf, '&modifiable') != 1
+      continue
+    endif
+
+    " skip temporary buffers with buftype set
+    if getbufvar(buf, '&buftype') != ''
+      continue
+    endif
+
+    " skip the preview window
+    if getwinvar(i, '&previewwindow')
+      continue
+    endif
+
+    let res += 1
+  endfor
+
+  return res
+endfunction
+autocmd bufenter * if (s:CountNormalWindows() == 0) | q | endif
+
+au FileType qf call AdjustWindowHeight(3, 10)
+function! AdjustWindowHeight(minheight, maxheight)
+  "wincmd J
+  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
+endfunction
 " Always make quickfix window split right across the very bottom
 autocmd FileType qf wincmd J
 

@@ -101,3 +101,15 @@
 [submodule "bundle/vim-common-jumplist"]
 	path = bundle/vim-common-jumplist
 	url = git@github.com:myitcv/vim-common-jumplist.git
+[submodule "bundle/vim-go"]
+	path = bundle/vim-go
+	url = git@github.com:myitcv/vim-go.git
+[submodule "bundle/vim-maximizer"]
+	path = bundle/vim-maximizer
+	url = git@github.com:szw/vim-maximizer.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = git@github.com:honza/vim-snippets.git
