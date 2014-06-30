@@ -104,9 +104,6 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = git@github.com:myitcv/vim-go.git
-[submodule "bundle/vim-maximizer"]
-	path = bundle/vim-maximizer
-	url = git@github.com:szw/vim-maximizer.git
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
