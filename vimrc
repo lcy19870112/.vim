@@ -43,6 +43,7 @@ set pastetoggle=<F10>
 set updatetime=1000
 set completeopt=menu,preview,longest
 set switchbuf+=useopen
+set pvh=3
 
 autocmd InsertEnter * let w:last_fdm=&foldmethod | setlocal foldmethod=manual
 autocmd InsertLeave * let &l:foldmethod=w:last_fdm
@@ -152,7 +153,7 @@ let g:indent_guides_default_mapping=0
 " ***
 
 " *** AutoPairs
-let g:AutoPairsFlyMode = 1
+let g:AutoPairsFlyMode = 0
 " ***
 
 let g:go_disable_autoinstall = 1
@@ -202,3 +203,13 @@ endfunction
 " Always make quickfix window split right across the very bottom
 autocmd FileType qf wincmd J
 
+" Preview window height fixing
+au BufEnter ?* call PreviewHeightWorkAround()
+
+function! PreviewHeightWorkAround()
+  if &previewwindow
+    exec 'setlocal winheight=3'
+    exec 'setlocal winminheight=3'
+    exec 'setlocal winfixheight'
+  endif
+endfunc

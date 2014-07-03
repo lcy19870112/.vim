@@ -36,9 +36,10 @@ func! GoImportImap()
   call setpos('.', cur_pos)
 endfunc
 
-" imap <C-i> <C-\><C-O>:silent! call GoImportImap()<CR>
-au FileType go imap <C-f> <C-\><C-O>:silent! call GoFmtImap()<CR>
+au FileType go imap <C-A-i> <C-\><C-O>call GoImportImap()
+" au FileType go nmap <C-A-f> <Plug>(go-format)
 au FileType go nmap <Leader>gd <Plug>(go-doc-split)
+au FileType go nnoremap <leader>m :silent make\|redraw!\|cwindow\|cc<CR>
 
 au BufEnter,FileType go :TagbarOpen
 
@@ -86,17 +87,41 @@ function! FixWindows()
   call tagbar#CloseWindow()
   exec "wincmd ="
   call tagbar#OpenWindow()
+  let qf = []
+  let pw = []
+  let godoc = []
   for i in range(1,winnr('$'))
-    " we want the quickfix window right at the bottom
     if getbufvar(winbufnr(i), '&filetype') == "godoc"
-      exec i."wincmd w"
-      resize 10
+      call insert(godoc,i)
     endif
+    if getwinvar(i, '&previewwindow')
+      call insert(pw,i)
+    endif
+    if getbufvar(winbufnr(i), '&filetype') == "qf"
+      call insert(qf,i)
+    endif
+  endfor
+  for i in qf
+    setlocal winheight=3
+    setlocal winminheight=3
+    call AdjustWindowHeight(3,10)
+    exec i."wincmd w"
+    wincmd J
+  endfor
+  for i in godoc
+    exec i."wincmd w"
+    call AdjustWindowHeight(10,10)
+  endfor
+  for i in pw
+    setlocal winheight=3
+    setlocal winminheight=3
+    exec i."wincmd w"
+    call AdjustWindowHeight(3,10)
   endfor
   exec cur_win."wincmd w"
   call setpos(".", cur_cur)
 endfunc
 
-nmap <C-g> :call FixWindows()<CR>
+nmap <C-g> :silent call FixWindows()<CR>
 au FileType godoc resize 10
 
