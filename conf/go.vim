@@ -39,7 +39,7 @@ endfunc
 au FileType go imap <C-A-i> <C-\><C-O>call GoImportImap()
 " au FileType go nmap <C-A-f> <Plug>(go-format)
 au FileType go nmap <Leader>gd <Plug>(go-doc-split)
-au FileType go nnoremap <leader>m :silent make\|redraw!\|cwindow\|cc<CR>
+au FileType go nnoremap <leader>m :silent make\|redraw!\|botright cwindow\|cc<CR>
 
 au BufEnter,FileType go :TagbarOpen
 
@@ -102,20 +102,22 @@ function! FixWindows()
     endif
   endfor
   for i in qf
+    exec i."wincmd w"
+    " wincmd J
+    call AdjustWindowHeight(3,10)
     setlocal winheight=3
     setlocal winminheight=3
     call AdjustWindowHeight(3,10)
-    exec i."wincmd w"
-    wincmd J
   endfor
   for i in godoc
     exec i."wincmd w"
     call AdjustWindowHeight(10,10)
   endfor
   for i in pw
+    exec i."wincmd w"
+    call AdjustWindowHeight(3,10)
     setlocal winheight=3
     setlocal winminheight=3
-    exec i."wincmd w"
     call AdjustWindowHeight(3,10)
   endfor
   exec cur_win."wincmd w"

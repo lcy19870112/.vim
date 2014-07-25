@@ -200,8 +200,9 @@ function! AdjustWindowHeight(minheight, maxheight)
   "wincmd J
   exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
 endfunction
+
 " Always make quickfix window split right across the very bottom
-autocmd FileType qf wincmd J
+" autocmd FileType qf wincmd J
 
 " Preview window height fixing
 au BufEnter ?* call PreviewHeightWorkAround()
@@ -213,3 +214,13 @@ function! PreviewHeightWorkAround()
     exec 'setlocal winfixheight'
   endif
 endfunc
+
+fu! CursorBytePos()
+  if &encoding != 'utf-8'
+    let c = col('.')
+    let buf = line('.') == 1 ? "" : (join(getline(1, line('.')-1), "\n") . "\n")
+    let buf .= c == 1 ? "" : getline('.')[:c-2]
+    return printf('%d', len(iconv(buf, &encoding, "utf-8")))
+  endif
+  return printf('%d', line2byte(line('.')) + (col('.')-2))
+endf

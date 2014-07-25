@@ -110,3 +110,9 @@
 [submodule "bundle/vim-maximizer"]
 	path = bundle/vim-maximizer
 	url = git@github.com:myitcv/vim-maximizer.git
+[submodule "bundle/vim-markdownfootnotes"]
+	path = bundle/vim-markdownfootnotes
+	url = git@github.com:myitcv/vim-markdownfootnotes.git
+[submodule "bundle/dart-vim-plugin"]
+	path = bundle/dart-vim-plugin
+	url = git@github.com:myitcv/dart-vim-plugin.git
