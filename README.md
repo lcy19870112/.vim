@@ -5,7 +5,7 @@ Inspired by [@rey](https://github.com/rey)
 ## Get the config
 
 ```bash
-git clone git@github.com:myitcv/.vim.git ~/.vim
+git clone https://github.com/myitcv/.vim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 cd ~/.vim
 git submodule init
